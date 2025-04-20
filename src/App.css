@@ -1,0 +1,10 @@
+
+@media screen and (max-width: 1024px){
+    nav a{
+        padding: 8px 80px;
+        border-radius: 7px;
+    }
+    nav a:hover{
+        background: tomato;
+    }
+}

@@ -47,7 +47,13 @@ const Navbar = () => {
             <div className='flex items-center gap-6 lg:hidden'>
                 <button className='btn btn-primary'>Sign In</button>
 
-                <div className={`flex flex-col gap-6 items-end pr-8  absolute top-16 bg-secondary w-[70vw] py-4 rounded-lg ${!navOpen ? '-right-96' : ' right-1'} duration-300 shadow-md`}>
+                <button onClick={() => setNavOpen(!navOpen)}>
+                    {
+                        navOpen ? <FaTimes size={28} /> : <FaBars size={28} />
+                    }
+                </button>
+
+                <div className={`flex flex-col gap-6 items-center pr-8  absolute top-16 bg-secondary w-[70vw] max-w-[300px] py-12 rounded-lg ${!navOpen ? '-right-96' : ' right-1'} duration-300 shadow-md`}>
                     <form className='flex items-center h-8 border-r-0 border-[2px] border-primary bg-white rounded '>
                         <input className='px-2 py-1 bg-transparent w-52 outline-none' type="text" />
                         <button className='bg-primary h-full w-8 flex justify-center items-center '>
@@ -67,11 +73,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <button onClick={() => setNavOpen(!navOpen)} className='mr-3'>
-                    {
-                        navOpen ? <FaTimes size={28} /> : <FaBars size={28} />
-                    }
-                </button>
+
             </div>
         </nav>
     )
