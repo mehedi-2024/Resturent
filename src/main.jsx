@@ -7,16 +7,20 @@ import {
 import './index.css'
 import App from './App.jsx'
 import AppContextCompo from './context/AppContext.jsx';
+import Home from './pages/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ]
   },
-  {
-    path: "/1",
-    element: <div>hi</div>,
-  },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
