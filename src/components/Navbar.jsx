@@ -13,7 +13,7 @@ const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false)
 
     return (
-        <nav className='flex justify-between px-6 py-4 items-center relative border-b border-text mb-7'>
+        <nav className='flex justify-between px-6 py-4 items-center relative border-b border-text mb-4 lg:mb-6'>
             <div>
                 <img src={logo} alt="" />
             </div>
