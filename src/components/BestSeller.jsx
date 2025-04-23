@@ -15,7 +15,7 @@ const BestSeller = () => {
                         console.log(each)
                         return (
                             <div key={index} className={`bg-sky-200 w-full flex flex-col items-center gap-5 rounded-lg py-8 hover:scale-[1.02] px-[10%]`}>
-                                <img src={each.image[0]} className='w-[150px] h-[150px] rounded-full' alt="" />
+                                <img src={each.image[0]} className='w-[200px] h-[200px] -my-6 rounded-full' alt="" />
                                 <div className='w-full grid gap-3'>
                                     <p className='opacity-80'>{each.category}</p>
                                     <p className='font-semibold -mt-4'>{each.name}</p>
