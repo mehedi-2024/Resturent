@@ -1,20 +1,27 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { dummyProducts } from '../assets/greencart_assets/assets'
 import { CiShoppingCart } from "react-icons/ci";
 
 const BestSeller = () => {
 
+    const [bestSeller, setBestSeller] = useState([])
+
+    useEffect(() => {    
+      const prodects = dummyProducts.slice(0, 5)
+      setBestSeller([...prodects])
+    }, [])
+    
     return (
         <div className=' mt-5 py-8'>
             <h3>Best Sellers</h3>
 
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-4'>
                 {
-                    dummyProducts.map((each, index) => {
-                        console.log(each)
+                    bestSeller.map((each, index) => {
+                        // console.log(each)
                         return (
-                            <div key={index} className={`bg-sky-200 w-full flex flex-col items-center gap-5 rounded-lg py-8 hover:scale-[1.02] px-[10%]`}>
+                            <div key={index} className={`bg-bg border-[1px] border-gray-300 hover:shadow w-full flex flex-col items-center gap-5 rounded-lg py-8 hover:scale-[1.02] px-[10%]`}>
                                 <img src={each.image[0]} className='w-[200px] h-[200px] -my-6 rounded-full' alt="" />
                                 <div className='w-full grid gap-3'>
                                     <p className='opacity-80'>{each.category}</p>
