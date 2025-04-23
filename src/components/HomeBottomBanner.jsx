@@ -15,10 +15,10 @@ const HomeBottomBanner = () => {
                 <img src={bottom_banner_image} className='hidden md:block h-full w-full' alt="" />
                 <img src={bottom_banner_image_sm} className='md:hidden abslute h-full w-full top-0 left-0' alt="" />
 
-                <div className='absolute top-2 right-[50%] translate-x-[50%] md:right-10 lg:right-20 md:translate-x-0 md:top-[50%] md:-translate-y-[50%] sm:top-20 '>
+                <div className='absolute top-6 left-10 sm:right-[50%] sm:translate-x-[50%] md:right-10 md:ml-[15vw] lg:right-20 md:top-[50%] md:-translate-y-[50%] sm:top-20 '>
                     <h4 className=''>Why We Are the Best?</h4>
 
-                    <div className='space-y-[3px] sm:space-y-10 md:space-y-5'>
+                    <div className=' sm:space-y-10 md:space-y-5'>
                         <div className='flex gap-4 items-center mt-6'>
                             <img src={delivery_truck_icon} className='w-[35px] h-[35px]' alt="" />
                             <div>
