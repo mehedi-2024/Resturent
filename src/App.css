@@ -8,3 +8,7 @@
         background: rgb(175, 172, 248);
     }
 }
+
+::-webkit-scrollbar{
+    width: 0;
+}
