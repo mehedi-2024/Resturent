@@ -24,7 +24,7 @@ const Navbar = () => {
     })
 
     return (
-        <div className={isFixedNav ? 'fixed top-0 left-0 z-50 bg-white/50 backdrop-blur-md w-full duration-700 shadow-2xl' : 'duration-700'}>
+        <div className={isFixedNav ? 'fixed top-0 left-0 z-50 bg-white/50 backdrop-blur-md w-full duration-[1.5s] shadow-2xl' : 'duration-700'}>
             <nav className={`flex justify-between px-6 py-4 items-center relative border-b border-text`}>
                 <div>
                     <img src={logo} alt="" />
@@ -65,7 +65,7 @@ const Navbar = () => {
                         }
                     </button>
 
-                    <div className={`flex flex-col gap-6 items-center pr-8  fixed top-20 bg-secondary z-20 w-[70vw] max-w-[300px] py-12 rounded-lg ${!navOpen ? '-right-96' : ' right-1'} duration-300 shadow-md`}>
+                    <div className={`flex flex-col gap-6 items-center pr-8  fixed top-20 bg-white/90 backdrop-blur-xl  z-[100] w-[70vw] max-w-[300px] py-12 rounded-lg ${!navOpen ? '-right-96' : ' right-1'} duration-300 shadow-md`}>
                         <form className='flex items-center h-8 border-r-0 border-[2px] border-primary bg-white rounded '>
                             <input className='px-2 py-1 bg-transparent w-52 outline-none' type="text" />
                             <button className='bg-primary h-full w-8 flex justify-center items-center '>
