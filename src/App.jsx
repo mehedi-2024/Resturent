@@ -8,7 +8,7 @@ const App = () => {
     document.body.classList.add('light')
   }, [])
   return (
-    <div id='main' className='bg-bg text-text max-w-screen mx-auto xl:px-[7%] px-0 overflow-x-hidden min-h-screen'>
+    <div id='main' className='bg-bg text-text max-w-screen mx-auto  px-0 overflow-x-hidden min-h-screen'>
       <Navbar />
       <Outlet />
     </div>
