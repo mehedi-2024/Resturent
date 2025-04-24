@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        <footer className='w-full min-h-[25vh] bg-green-50 p-12 rounded-lg mt-10 md:grid grid-cols-2 gap-8'>
-            <div className='w-[80%] md:w-full'>
+        <footer className='w-full min-h-[25vh] bg-green-50 p-12 rounded-lg mt-10 md:mt-16 lg:mt-24 md:grid grid-cols-2 gap-8'>
+            <div className='w-[100%] md:w-[80%]'>
                 <div className="mb-4">
                     <img src={assets.logo} alt="" />
                 </div>
-                <p className='opacity-75 text-sm'>
+                <p className='opacity-75 text-[1rem]'>
                     We deliver fresh groceries and snacks straight to your door. Trusted by thousands, we aim to make your shopping experience simple and affordable.
                 </p>
             </div>
