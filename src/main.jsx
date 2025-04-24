@@ -8,6 +8,7 @@ import './index.css'
 import App from './App.jsx'
 import AppContextCompo from './context/AppContext.jsx';
 import Home from './pages/Home.jsx';
+import Login from './components/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ]
   },

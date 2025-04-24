@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react'
 import { assets } from '../assets/greencart_assets/assets'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { FaSearch } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
@@ -51,13 +51,12 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <button className='btn btn-primary'>Sign In</button>
+                    <Link to={'/login'}><button className='btn btn-primary'>Login</button></Link>
                 </div>
 
                 {/* for tab and mobile */}
-
                 <div className='flex items-center gap-6 lg:hidden'>
-                    <button className='btn btn-primary'>Sign In</button>
+                    <Link to={'/login'}><button className='btn btn-primary'>Login</button></Link>
 
                     <button onClick={() => setNavOpen(!navOpen)}>
                         {
@@ -87,8 +86,8 @@ const Navbar = () => {
                     </div>
 
                 </div>
-            </nav>
-        </div>
+            </nav >
+        </div >
     )
 }
 
