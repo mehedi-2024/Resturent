@@ -3,11 +3,13 @@ import Lottie from 'lottie-react'
 import React, { useContext } from 'react'
 import signinAnimation from '../assets/lottie/animation.json'
 import Navbar from './Navbar'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
 import { toast, ToastContainer } from 'react-toastify'
 
 const Login = () => {
+
+    const navigate = useNavigate()
 
     const mainContext = useContext(AppContext)
     const { signinWithPassword } = mainContext.authValu
@@ -26,6 +28,9 @@ const Login = () => {
                     position: "bottom-left",
                     autoClose: 2000,
                 });
+                setTimeout(() => {
+                    navigate('/');
+                }, 2500);
             })
             .catch(err => {
                 toast.error('Invalied email or password', {
