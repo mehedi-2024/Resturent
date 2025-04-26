@@ -9,6 +9,7 @@ import App from './App.jsx'
 import AppContextCompo from './context/AppContext.jsx';
 import Home from './pages/Home.jsx';
 import Login from './components/Login.jsx';
+import Signup from './components/Signup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,10 +21,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/login",
-        element: <Login />,
+        path: "/signup",
+        element: <Signup />,
       },
     ]
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 
 ]);

@@ -14,7 +14,7 @@ const Navbar = () => {
     const [isFixedNav, setIsFixedNav] = useState(false)
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 70) {
+        if (window.scrollY > 30) {
             console.log(true)
             setIsFixedNav(true)
         } else {
