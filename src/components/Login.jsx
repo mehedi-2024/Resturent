@@ -3,6 +3,7 @@ import Lottie from 'lottie-react'
 import React from 'react'
 import signinAnimation from '../assets/lottie/animation.json'
 import Navbar from './Navbar'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -29,11 +30,13 @@ const Login = () => {
                                     </label>
                                     <input type="password" placeholder="password" className="input input-bordered" required />
                                     <label className="label">
-                                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                        <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn-primary -mt-4">Login</button>
+
+                                    <p className='mt-3'>Don't have an account ? <Link className='text-green-500 hover:underline' to='/signup'>Click here</Link></p>
                                 </div>
                             </form>
                         </div>
