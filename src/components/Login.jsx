@@ -1,13 +1,42 @@
 
 import Lottie from 'lottie-react'
-import React from 'react'
+import React, { useContext } from 'react'
 import signinAnimation from '../assets/lottie/animation.json'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
+import { AppContext } from '../context/AppContext'
+import { toast, ToastContainer } from 'react-toastify'
 
 const Login = () => {
+
+    const mainContext = useContext(AppContext)
+    const { signinWithPassword } = mainContext.authValu
+
+    const handleLogin = e => {
+        e.preventDefault()
+
+        const email = e.target.email.value
+        const password = e.target.password.value
+
+        console.log(email, password)
+
+        signinWithPassword(email, password)
+            .then(result => {
+                toast.success('Login successful!', {
+                    position: "bottom-left",
+                    autoClose: 2000,
+                });
+            })
+            .catch(err => {
+                toast.error('Invalied email or password', {
+                    position: "bottom-left",
+                    autoClose: 2000,
+                });
+            })
+    }
     return (
         <div className='min-h-[120vh]'>
+            <ToastContainer />
             <Navbar />
             <div className="hero mt-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -17,18 +46,18 @@ const Login = () => {
                     <div>
                         <h4>Sign In</h4>
                         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                            <form className="card-body">
+                            <form onSubmit={handleLogin} className="card-body">
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
-                                    <input type="email" placeholder="email" className="input input-bordered" required />
+                                    <input name='email' type="email" placeholder="email" className="input input-bordered" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Password</span>
                                     </label>
-                                    <input type="password" placeholder="password" className="input input-bordered" required />
+                                    <input name='password' type="password" placeholder="password" className="input input-bordered" required />
                                     <label className="label">
                                         <Link href="#" className="label-text-alt link link-hover">Forgot password?</Link>
                                     </label>

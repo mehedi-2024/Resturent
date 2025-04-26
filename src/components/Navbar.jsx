@@ -14,11 +14,9 @@ const Navbar = () => {
     const [isFixedNav, setIsFixedNav] = useState(false)
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 30) {
-            console.log(true)
+        if (window.scrollY > .1) {
             setIsFixedNav(true)
         } else {
-            console.log(false)
             setIsFixedNav(false)
         }
     })
@@ -51,12 +49,12 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <Link to={'/login'}><button className='btn btn-primary'>Login</button></Link>
+                    <Link to={'/login'}><button className='btn btn-primary text-white bg-green-500 border-0'>Login</button></Link>
                 </div>
 
                 {/* for tab and mobile */}
                 <div className='flex items-center gap-6 lg:hidden'>
-                    <Link to={'/login'}><button className='btn btn-primary'>Login</button></Link>
+                    <Link to={'/login'}><button className='btn btn-primary text-white bg-green-500 border-0'>Login</button></Link>
 
                     <button onClick={() => setNavOpen(!navOpen)}>
                         {
